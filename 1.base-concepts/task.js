@@ -2,23 +2,21 @@
 
 "use strict"
 
-let arr = [];
-
 function solveEquation(a, b, c) {
-  
+  let arr = [];
+
   const discriminant = Math.pow(b, 2) - 4*a*c
 
   if(discriminant < 0) {
     arr = [];                // Корней нет
   } else if (discriminant == 0) {
     const root = -b/(2*a);
-    arr = [root];
+    arr = [root];            // Один корень
   } else {
-    const rootOne = (-b + Math.sqrt(discriminant) )/(2*a);
+    const rootOne = (-b + Math.sqrt(discriminant) )/(2*a); // Два корня
     const rootTwo = (-b - Math.sqrt(discriminant) )/(2*a);
     arr = [rootOne, rootTwo];
   }
-
   return arr;
 }
 
