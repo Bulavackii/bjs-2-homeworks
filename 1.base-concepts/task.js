@@ -1,9 +1,11 @@
 // Задача 1
 
 "use strict"
-function solveEquation(a, b, c) {
-  let arr = [];
 
+let arr = [];
+
+function solveEquation(a, b, c) {
+  
   const discriminant = Math.pow(b, 2) - 4*a*c
 
   if(discriminant < 0) {
