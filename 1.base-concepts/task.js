@@ -2,7 +2,7 @@
 
 "use strict"
 function solveEquation(a, b, c) {
-  let arr = [];
+  const arr = [];
 
   const discriminant = Math.pow(b, 2) - 4*a*c
 
@@ -40,7 +40,7 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
     countMonths <= 0 ||
     !Number.isInteger(countMonths) // Проверка на дроби
   ) {
-    return "Ошибка входных данных. Убедитесь, что все аргументы являются числами";
+    return alert("Ошибка входных данных. Убедитесь, что все аргументы являются числами и введены корректные значения");
   }
 
   // Преобразуем процентную ставку в доли (от 0 до 1) и в месячную ставку, п. 2
