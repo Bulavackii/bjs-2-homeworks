@@ -2,7 +2,7 @@
 
 "use strict"
 function solveEquation(a, b, c) {
-  const arr = [];
+  let arr = [];
 
   const discriminant = Math.pow(b, 2) - 4*a*c
 
