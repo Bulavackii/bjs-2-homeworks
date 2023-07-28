@@ -2,7 +2,7 @@
 
 "use strict"
 function solveEquation(a, b, c) {
-  let arr = [];
+  const arr = [];
 
   const discriminant = Math.pow(b, 2) - 4*a*c
 
@@ -12,8 +12,8 @@ function solveEquation(a, b, c) {
     const root = -b/(2*a);
     arr = [root];
   } else {
-    let rootOne = (-b + Math.sqrt(discriminant) )/(2*a);
-    let rootTwo = (-b - Math.sqrt(discriminant) )/(2*a);
+    const rootOne = (-b + Math.sqrt(discriminant) )/(2*a);
+    const rootTwo = (-b - Math.sqrt(discriminant) )/(2*a);
     arr = [rootOne, rootTwo];
   }
 
