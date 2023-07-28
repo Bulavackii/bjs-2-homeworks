@@ -12,8 +12,8 @@ function solveEquation(a, b, c) {
     const root = -b/(2*a);
     arr = [root];
   } else {
-    const rootOne = (-b + Math.sqrt(d) )/(2*a);
-    const rootTwo = (-b - Math.sqrt(d) )/(2*a);
+    const rootOne = (-b + Math.sqrt(discriminant) )/(2*a);
+    const rootTwo = (-b - Math.sqrt(discriminant) )/(2*a);
     arr = [rootOne, rootTwo];
   }
 
