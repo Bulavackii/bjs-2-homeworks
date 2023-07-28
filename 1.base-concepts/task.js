@@ -2,12 +2,11 @@
 
 "use strict"
 function solveEquation(a, b, c) {
-  let arr = [];
 
   const discriminant = Math.pow(b, 2) - 4*a*c
 
   if(discriminant < 0) {
-    arr = [];                // Корней нет
+    let arr = [];                // Корней нет
   } else if (discriminant == 0) {
     const root = -b/(2*a);
     arr = [root];
