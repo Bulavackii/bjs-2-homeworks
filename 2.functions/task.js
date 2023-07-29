@@ -27,7 +27,7 @@ function getArrayParams(...arr) {
   const avg = sum / arr.length;
 
   // Округляем среднее значение до двух знаков после запятой и возвращаем объект с результатами
-  return { min: min, max: max, avg: avg.toFixed(2) };
+  return { min: min, max: max, avg: +avg.toFixed(2) };
 }
 
 
