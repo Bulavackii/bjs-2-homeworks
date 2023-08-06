@@ -14,15 +14,18 @@ Student.prototype.setSubject = function (subjectName) {
 }
 
 Student.prototype.addMarks = function (...marks) {
+    if (this.hasOwnProperty('excluded')) {
+        return; 
+    }
     if (!this.hasOwnProperty('marks')) {
-        this.marks = []; 
+        this.marks = [];
     }
     this.marks.push(...marks);
 }
 
 Student.prototype.getAverage = function () {
-    if (!this.hasOwnProperty('marks') || this.marks.length === 0) {
-        return 0;
+    if (this.hasOwnProperty('excluded') || !this.hasOwnProperty('marks') || this.marks.length === 0) {
+        return 0; 
     } else {
         const sum = this.marks.reduce(function (currentsum, currentNumber) {
             return currentsum + currentNumber;
@@ -32,9 +35,10 @@ Student.prototype.getAverage = function () {
     }
 }
 
-Student.prototype.exclude = function (reason) {
+Student.prototype.excluded = function (reason) {
     delete this.subject;
     delete this.marks;
+    delete this.excluded;
     this.excluded = reason;
 }
 
