@@ -11,7 +11,13 @@ class AlarmClock {
             throw new Error('Отсутствуют обязательные аргументы');
         }
 
-        // Добавляем звонок в коллекцию, даже если такой уже существует
+        // Проверка наличия звонка с таким же временем
+        const existingAlarm = this.alarmCollection.find(alarm => alarm.time === time);
+        if (existingAlarm) {
+            console.warn('Уже присутствует звонок на это же время');
+        }
+
+        // Добавляем звонок в коллекцию
         this.alarmCollection.push({
             callback: callback,
             time: time,
