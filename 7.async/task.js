@@ -78,3 +78,8 @@ class AlarmClock {
         this.alarmCollection = [];
     }
 }
+
+const alarmClock = new AlarmClock();
+alarmClock.addClock('09:00', () => console.log('Пора вставать!'));
+alarmClock.addClock('09:01', () => console.log('Время завтрака!'));
+alarmClock.start();
